@@ -1,0 +1,709 @@
+<head>
+  <title>Chains</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Bootstrap JavaScript and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  <!-- Script for custom Bootstrap validation -->
+</head><!-- Navigation Bar -->
+<!-- Navigation Bar -->
+<nav class="navbar fixed-top navbar-expand-lg bg-dark navbar-dark shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" routerLink="/home">Pranav Jewellery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <!-- Jewellery Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> All Jewellery </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/rings">Rings</a></li>
+            <li><a class="dropdown-item" routerLink="/bangles">Bangles</a></li>
+            <li><a class="dropdown-item" routerLink="/earringset">Earrings set</a></li>
+            <li><a class="dropdown-item" routerLink="/necklace">Necklaces</a></li>
+            <li><a class="dropdown-item" routerLink="/nosepin">Nose Pin</a></li>
+            <li><a class="dropdown-item" routerLink="/chains">Chains</a></li>
+            <li><a class="dropdown-item" routerLink="/bracelet">Bracelet</a></li>
+          </ul>
+        </li>
+
+        <!-- Category Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Category </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/rings">Men</a></li>
+            <li><a class="dropdown-item" routerLink="/earringset">Women</a></li>
+            <li><a class="dropdown-item" routerLink="/chains">Kids</a></li>
+          </ul>
+        </li>
+
+        <!-- Gold Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Gold </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/grings">Engagement Rings</a></li>
+            <li><a class="dropdown-item" routerLink="/gpendant">Pendants</a></li>
+            <li><a class="dropdown-item" routerLink="/gchains">Chains</a></li>
+          </ul>
+        </li>
+
+        <!-- Diamond Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"> Diamond </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/dbangle">Bangles</a></li>
+            <li><a class="dropdown-item" routerLink="/dpendant">Pendants</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Carousel -->
+<div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner slider_area slider_black">
+    
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <img src="./assets/photos/slider/21.jpg" class="d-block w-100 carousel-image" alt="slider-1">
+      <div class="carousel-caption d-md-block text-center-left">
+        <h6>Exclusive offer -20% off this week</h6>
+        <h1 class="display-2">Necklace</h1>
+        <span>22 Carat gold necklace for wedding</span><br><br>
+        <h5><p class="slider_price">starting at <span>Rs. 75,999</span></p></h5>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <img src="./assets/photos/slider/101.jpeg" class="d-block w-100 carousel-image" alt="slider-2">
+      <div class="carousel-caption d-md-block text-center-left">
+        <h6>Exclusive offer -40% off this week</h6>
+        <h1 class="display-2">Earings and Pendant</h1>
+        <span>Complete bridal set with white pearls</span><br><br>
+        <h5><p class="slider_price">starting at <span>Rs. 89,499</span></p></h5>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="./assets/photos/slider/3.jpg" class="d-block w-100 carousel-image" alt="slider-3">
+      <div class="carousel-caption d-md-block text-center-left">
+        <h6>Exclusive offer -10% off this week</h6>
+        <h1 class="display-2">Wedding Rings</h1>
+        <span>Special wedding rings for couples.</span><br><br>
+        <h5><p class="slider_price">starting at <span>Rs. 14,999</span></p></h5>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Optional: Add Controls if you want to click next/prev -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+<!-- Gold Price Section -->
+<div class="container text-center py-5">
+  <div *ngIf="goldPrice; else loading" class="bg-light p-4 rounded shadow-sm">
+    <h2 class="text-dark">Live Gold Price (24K): <span class="text-warning">₹{{ goldPrice }}</span></h2>
+  </div>
+  <ng-template #loading>
+    <div class="spinner-border text-warning" role="status"></div>
+    <p>Fetching Live Prices...</p>
+  </ng-template>
+</div>
+
+<!-- SECTION 1: GOLDEN BANGLES -->
+<div class="line mb-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Golden Bangles</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3" *ngFor="let bangle of bangles">
+        <div class="card h-100 product-card shadow-sm">
+          <img [src]="bangle.image" class="card-img-top p-3" [alt]="bangle.name">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ bangle.name }}</h5>
+            <hr>
+            <p class="slider_price text-muted">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ bangle.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-dark" (click)="setSelectedItem(bangle)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark" (click)="addToCart(bangle)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: GOLD CHAINS -->
+<div class="line mb-5 py-5" style="background-color: #f8f9fa;">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Gold Chains</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3" *ngFor="let chain of gchains">
+        <div class="card h-100 product-card shadow-sm">
+          <img [src]="chain.image" class="card-img-top p-3" [alt]="chain.name">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ chain.name }}</h5>
+            <hr>
+            <p class="slider_price text-muted">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ chain.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <button class="btn btn-dark" (click)="setSelectedItem(chain)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark" (click)="addToCart(chain)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Gold Pendants Section -->
+<div class="line mb-5 mt-5">
+  <!-- Use the same header structure as Chains -->
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Gold Pendants</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3 mb-4" *ngFor="let pendant of gpendants">
+        <div class="card h-100 product-card shadow-sm">
+          <!-- Image container to keep them uniform -->
+          <div class="img-container">
+            <img [src]="pendant.image" class="card-img-top" [alt]="pendant.name">
+          </div>
+          
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold">{{ pendant.name }}</h5>
+            <hr class="small-hr">
+            <p class="text-muted mb-1">starting at</p>
+            <h6 class="price-tag mb-3" style="color: #a8741a">{{ pendant.price }}</h6>
+            
+            <div class="mt-auto d-grid gap-2">
+              <button class="btn btn-dark buy-now-btn" (click)="setSelectedItem(pendant)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark add-cart-btn" (click)="addToCart(pendant)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: ENGAGEMENT RINGS (Added after Pendants) -->
+<div class="line mb-5 py-5" style="background-color: #f8f9fa;">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Engagement Rings</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Looping through the 'rings' array from TS -->
+      <div class="col-md-3" *ngFor="let ring of rings">
+        <div class="card h-100 product-card shadow-sm">
+          <img [src]="ring.image" class="card-img-top p-3" [alt]="ring.name">
+          <div class="card-body text-center">
+            <h5 class="card-title text-dark">{{ ring.name }}</h5>
+            <hr>
+            <p class="slider_price text-muted">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ ring.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <!-- Unified setSelectedItem handles the modal data -->
+              <button class="btn btn-dark" (click)="setSelectedItem(ring)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark" (click)="addToCart(ring)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: EARRING SETS -->
+<div class="line mb-5 mt-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Earring Sets</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3 mb-4" *ngFor="let earring of earrings">
+        <div class="card h-100 product-card shadow-sm">
+          <!-- Image container for uniform sizes -->
+          <div class="img-container">
+            <img [src]="earring.image" class="card-img-top" [alt]="earring.name">
+          </div>
+          
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold">{{ earring.name }}</h5>
+            <hr class="small-hr">
+            <p class="text-muted mb-1">starting at</p>
+            <h6 class="price-tag mb-3" style="color: #a8741a">{{ earring.price }}</h6>
+            
+            <div class="mt-auto d-grid gap-2">
+              <!-- Using the unified setSelectedItem method -->
+              <button class="btn btn-dark buy-now-btn" (click)="setSelectedItem(earring)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark add-cart-btn" (click)="addToCart(earring)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5: BRACELETS (Added after Engagement Rings) -->
+<div class="line mb-5 py-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Designer Bracelets</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Looping through the 'bracelets' array from TS -->
+      <div class="col-md-3" *ngFor="let item of bracelets">
+        <div class="card h-100 product-card shadow-sm border-0">
+          <img [src]="item.image" class="card-img-top p-3" [alt]="item.name" style="height: 200px; object-fit: contain;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-dark fw-bold">{{ item.name }}</h5>
+            <hr class="my-2">
+            <p class="slider_price text-muted mb-3">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ item.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <!-- Using the unified setSelectedItem method -->
+              <button class="btn btn-dark btn-sm py-2" (click)="setSelectedItem(item)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark btn-sm py-2" (click)="addToCart(item)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: DIAMOND PENDANTS (Added after Bracelets) -->
+<div class="line mb-5 py-5" style="background-color: #f8f9fa;">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Diamond Pendants</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Looping through the 'pendant' array from TS -->
+      <div class="col-md-3" *ngFor="let item of pendant">
+        <div class="card h-100 product-card shadow-sm border-0">
+          <img [src]="item.image" class="card-img-top p-3" [alt]="item.name" style="height: 200px; object-fit: contain;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-dark fw-bold">{{ item.name }}</h5>
+            <hr class="my-2">
+            <p class="slider_price text-muted mb-3">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ item.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <!-- Using the unified setSelectedItem method to handle the modal -->
+              <button class="btn btn-dark btn-sm py-2" (click)="setSelectedItem(item)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark btn-sm py-2" (click)="addToCart(item)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 5: Diamond RINGS -->
+<div class="line mb-5 mt-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Diamond Rings</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3 mb-4" *ngFor="let ring of drings">
+        <div class="card h-100 product-card shadow-sm">
+          <!-- Fixed height image container -->
+          <div class="img-container">
+            <img [src]="ring.image" class="card-img-top" [alt]="ring.name">
+          </div>
+          
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold">{{ ring.name }}</h5>
+            <hr class="small-hr">
+            <p class="text-muted mb-1">starting at</p>
+            <h6 class="price-tag mb-3" style="color: #a8741a">{{ ring.price }}</h6>
+            
+            <div class="mt-auto d-grid gap-2">
+              <!-- Unified selection method -->
+              <button class="btn btn-dark buy-now-btn" (click)="setSelectedItem(ring)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark add-cart-btn" (click)="addToCart(ring)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: CHAINS -->
+<div class="line mb-5 mt-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Chains</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3 mb-4" *ngFor="let chain of chains">
+        <div class="card h-100 product-card shadow-sm">
+          <!-- Image container for uniform height -->
+          <div class="img-container">
+            <img [src]="chain.image" class="card-img-top" [alt]="chain.name">
+          </div>
+          
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold">{{ chain.name }}</h5>
+            <hr class="small-hr">
+            <p class="text-muted mb-1">starting at</p>
+            <h6 class="price-tag mb-3" style="color: #a8741a">{{ chain.price }}</h6>
+            
+            <div class="mt-auto d-grid gap-2">
+              <!-- Unified selection method -->
+              <button class="btn btn-dark buy-now-btn" (click)="setSelectedItem(chain)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark add-cart-btn" (click)="addToCart(chain)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7: GOLD COINS -->
+<div class="line mb-5 mt-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Gold Coins</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3 mb-4" *ngFor="let coin of coins">
+        <div class="card h-100 product-card shadow-sm">
+          <!-- Image container for fixed height alignment -->
+          <div class="img-container">
+            <img [src]="coin.image" class="card-img-top" [alt]="coin.name">
+          </div>
+          
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title fw-bold">{{ coin.name }}</h5>
+            <hr class="small-hr">
+            <p class="text-muted mb-1">starting at</p>
+            <h6 class="price-tag mb-3" style="color: #a8741a">{{ coin.price }}</h6>
+            
+            <div class="mt-auto d-grid gap-2">
+              <!-- Unified selection method -->
+              <button class="btn btn-dark buy-now-btn" (click)="setSelectedItem(coin)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark add-cart-btn" (click)="addToCart(coin)">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7: BRIDAL NECKLACES (Added after Diamond Pendants) -->
+<div class="line mb-5 py-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Bridal Necklaces</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Looping through the 'necklace' array from TS -->
+      <div class="col-md-3" *ngFor="let item of necklace">
+        <div class="card h-100 product-card shadow-sm border-0">
+          <img [src]="item.image" class="card-img-top p-3" [alt]="item.name" style="height: 220px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-dark fw-bold">{{ item.name }}</h5>
+            <hr class="my-2">
+            <p class="slider_price text-muted mb-3">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ item.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <!-- Using the unified setSelectedItem method -->
+              <button class="btn btn-dark btn-sm py-2" (click)="setSelectedItem(item)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark btn-sm py-2" (click)="addToCart(item)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 8: DESIGNER NOSE PINS (Added after Bridal Necklaces) -->
+<div class="line mb-5 py-5" style="background-color: #f8f9fa;">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Designer Nose Pins</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Looping through the 'nosepins' array from TS -->
+      <div class="col-md-3" *ngFor="let item of nosepins">
+        <div class="card h-100 product-card shadow-sm border-0">
+          <div class="image-container p-3">
+             <img [src]="item.image" class="card-img-top" [alt]="item.name" style="height: 180px; object-fit: contain;">
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title text-dark fw-bold">{{ item.name }}</h5>
+            <hr class="my-2">
+            <p class="slider_price text-muted mb-3">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ item.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <!-- Using the unified setSelectedItem method -->
+              <button class="btn btn-dark btn-sm py-2" (click)="setSelectedItem(item)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark btn-sm py-2" (click)="addToCart(item)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 9: DIAMOND RINGS (Added after Nose Pins) -->
+<div class="line mb-5 py-5">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Rings</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Looping through the 'rings' array from TS -->
+      <div class="col-md-3" *ngFor="let item of nrings">
+        <div class="card h-100 product-card shadow-sm border-0">
+          <img [src]="item.image" class="card-img-top p-3" [alt]="item.name" style="height: 200px; object-fit: contain;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-dark fw-bold">{{ item.name }}</h5>
+            <hr class="my-2">
+            <p class="slider_price text-muted mb-3">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ item.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <!-- Using the unified setSelectedItem method -->
+              <button class="btn btn-dark btn-sm py-2" (click)="setSelectedItem(item)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark btn-sm py-2" (click)="addToCart(item)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 10: DESIGNER BRACELETS (Added after Diamond Rings) -->
+<div class="line mb-5 py-5" style="background-color: #f8f9fa;">
+  <div class="line-container text-center">
+    <b><span class="display-4 text-uppercase">Designer Bracelets</span></b>
+    <div class="gold-underline mx-auto"></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div class="row g-4 justify-content-center">
+      <!-- Looping through the 'bracelets' array from TS -->
+      <div class="col-md-3" *ngFor="let item of nbracelets">
+        <div class="card h-100 product-card shadow-sm border-0">
+          <img [src]="item.image" class="card-img-top p-3" [alt]="item.name" style="height: 200px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title text-dark fw-bold">{{ item.name }}</h5>
+            <hr class="my-2">
+            <p class="slider_price text-muted mb-3">starting at<br>
+              <span class="h5 fw-bold" style="color: #a8741a">{{ item.price }}</span>
+            </p>
+            <div class="d-grid gap-2">
+              <!-- Using the unified setSelectedItem method -->
+              <button class="btn btn-dark btn-sm py-2" (click)="setSelectedItem(item)" data-bs-toggle="modal" data-bs-target="#orderModal">Buy Now</button>
+              <button class="btn btn-outline-dark btn-sm py-2" (click)="addToCart(item)" data-bs-toggle="modal" data-bs-target="#cartModal">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Unified Order Modal (Bangles, Chains, Pendants) -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark">{{ selectedItem?.name }}</h5>
+        <span class="ms-2 badge bg-warning text-dark">{{ selectedItem?.price }}</span>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form class="row g-3" (ngSubmit)="confirmOrder(orderForm.value)" #orderForm="ngForm">
+          <div class="col-md-6">
+            <label class="form-label text-dark">First name</label>
+            <input type="text" class="form-control" name="firstName" ngModel required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label text-dark">Last name</label>
+            <input type="text" class="form-control" name="lastName" ngModel required>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label text-dark">Phone Number</label>
+            <input type="number" class="form-control" name="phoneNo" ngModel required>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label text-dark">Shipping Address</label>
+            <textarea class="form-control" name="address" ngModel required rows="2"></textarea>
+          </div>
+          <div class="col-md-12 text-center py-2">
+            <google-pay-button environment="TEST" buttonColor="black" buttonType="buy" [paymentRequest]="paymentRequest" [style.width.px]="buttonWidth"></google-pay-button>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-success w-100 fw-bold" type="submit" [disabled]="!orderForm.valid">CONFIRM ORDER</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title">Your Shopping Cart</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <app-cart></app-cart>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Professional Footer -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+      
+      <!-- Brand & Description -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Pranav Jewellery</h5>
+        <p>Crafting elegance since 1995. We specialize in 22K Gold, certified Diamonds, and exquisite handcrafted jewelry for every special occasion.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 footer-links">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Products</h5>
+        <p><a routerLink="/grings" class="text-white text-decoration-none">Gold Rings</a></p>
+        <p><a routerLink="/chains" class="text-white text-decoration-none">Gold Chains</a></p>
+        <p><a routerLink="/dbangle" class="text-white text-decoration-none">Diamond Bangles</a></p>
+        <p><a routerLink="/gpendant" class="text-white text-decoration-none">Pendants</a></p>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 footer-links">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Useful links</h5>
+        <p><a routerLink="/home" class="text-white text-decoration-none">Your Account</a></p>
+        <p><a routerLink="/contact" class="text-white text-decoration-none">Contact Us</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Shipping Rates</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Help</a></p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-warning">Contact</h5>
+        <p><i class="fas fa-home mr-3"></i> 123 Jewellery Street, Mumbai, India</p>
+        <p><i class="fas fa-envelope mr-3"></i> info&#64;pranavjewellery.com</p>
+        <p><i class="fas fa-phone mr-3"></i> +91 98765 43210</p>
+        <p><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
+      </div>
+    </div>
+
+    <hr class="mb-4">
+
+    <!-- Bottom Footer -->
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>Copyright ©2024 All rights reserved by:
+          <a href="#" style="text-decoration: none;">
+            <strong class="text-warning">Pranav Jewellery</strong>
+          </a>
+        </p>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-google-plus"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Spacer -->
+<div class="py-1"></div>
