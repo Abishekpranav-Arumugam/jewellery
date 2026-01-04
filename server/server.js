@@ -2,16 +2,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config();
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
 
-// MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/jewelleryshop', {
+// MongoDB Connection - Use environment variable for production
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/jewelleryshop';
+mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {

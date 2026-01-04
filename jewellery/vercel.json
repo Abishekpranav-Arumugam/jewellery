@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build:ssr",
+  "outputDirectory": "dist/jewellery/browser",
+  "installCommand": "npm install",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "routes": [
+    {
+      "src": "^/api/(.*)",
+      "destination": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ]
+}

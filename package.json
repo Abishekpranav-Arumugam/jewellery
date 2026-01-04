@@ -27,6 +27,7 @@
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "jquery": "^3.7.1",
     "rxjs": "~7.8.0",
